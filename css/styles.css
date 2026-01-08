@@ -47,6 +47,9 @@ img {
 
 .header {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16),
+    0 2px 1px 0 rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -85,7 +88,6 @@ img {
 }
 
 .nav-link {
-  position: relative;
   display: block;
   font-weight: 500;
   font-size: 16px;
@@ -93,20 +95,22 @@ img {
   letter-spacing: 0.02em;
   color: #2e2f42;
   padding: 24px 0;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav-link.active {
-  color: #404bbf;
+.nav-link.current {
+  position: relative;
 }
 
-.nav-link.active::after {
-  position: absolute;
+.nav-link.current::after {
   content: "";
+  position: absolute;
   left: 0;
   bottom: -1px;
   width: 100%;
   height: 4px;
-  display: block;
   background-color: #404bbf;
   border-radius: 2px;
 
@@ -131,12 +135,16 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link:hover,
 .nav-link:focus,
 .address-link:hover,
-.address-link:focus {
+.address-link:focus,
+.nav-link.current {
   color: #404bbf;
 }
 
@@ -312,6 +320,7 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+
 .team-social-item:hover,
 .team-social-item:focus {
   background-color: #404bbf;
@@ -320,6 +329,7 @@ img {
 .team-social-icon {
   margin: 0 auto;
   fill: #f4f4fd;
+  display: block;
 }
 
 /*portfolio*/
@@ -458,23 +468,32 @@ img {
 }
 
 .footer-social-item {
+
+  width: calc((100% - 48px) / 4);
+
+}
+
+.footer-social-link {
+  padding: 8px;
+  margin: 0 auto;
   display: flex;
+  align-items: center;
   justify-content: center;
   background-color: #4d5ae5;
-  padding: 8px;
   border-radius: 50%;
-  width: calc((100% - 48px) / 4);
   cursor: pointer;
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-social-item:hover {
+.footer-social-link:hover,
+.footer-social-link:focus {
   background-color: #31d0aa;
 }
 
 .footer-social-icon {
-  margin: 0 auto;
+
   fill: #f4f4fd;
+  display: block;
 }
