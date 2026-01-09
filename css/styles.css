@@ -302,18 +302,18 @@ img {
 
 .team-social-list {
   display: flex;
-  justify-content: space-evenly;
   gap: 24px;
 
 }
 
-.team-social-item {
+
+
+.team-social-link {
   display: flex;
   justify-content: center;
   background-color: #4d5ae5;
-  padding: 12px 0;
+  padding: 12px;
   border-radius: 50%;
-  width: calc((100% - 72px) / 4);
   cursor: pointer;
   transition-property: background-color;
   transition-duration: 250ms;
@@ -321,8 +321,8 @@ img {
 }
 
 
-.team-social-item:hover,
-.team-social-item:focus {
+.team-social-link:hover,
+.team-social-link:focus {
   background-color: #404bbf;
 }
 
@@ -467,11 +467,6 @@ img {
 
 }
 
-.footer-social-item {
-
-  width: calc((100% - 48px) / 4);
-
-}
 
 .footer-social-link {
   padding: 8px;
